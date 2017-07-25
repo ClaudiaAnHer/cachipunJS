@@ -1,1 +1,123 @@
-<!DOCTYPE html><html><head>	<title>Cachipun</title>	<meta charset="utf-8">	<link href="cachipun.css" rel="stylesheet" type="text/css">	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	<meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><div class="top-text">	<h1>Cachipun</h1>	<h2>Piedra | Papel | Tijera</h2>	<h3>escoge una opción</h3></div><div class="contenedor">	<div id="piedra"></div>	<div id="papel"></div>	<div id="tijeras"></div>	<div class="el_juego">		<h4 id="eleccion"></h4>		<h4 id="LaMaquina"></h4>		<h5 id="solucion"></h5>	</div><script type="text/javascript">// Variables juegovar piedra = document.getElementById("piedra");var tijera = document.getElementById("tijeras");var papel = document.getElementById("papel");var eleccion = document.getElementById("eleccion");var jugador;// Funciones jugadorpiedra.onclick = function(){ 	eleccion.innerText="Elegiste piedra"; 	jugador="piedra"; 	juego();}tijeras.onclick = function(){ 	eleccion.innerText="Elegiste tijera"; 	jugador="tijeras"; 	juego();}papel.onclick = function(){ 	eleccion.innerText="Elegiste papel"; 	jugador="papel"; 	juego();}// Funciones juegofunction juego (){	var LaMaquina= document.getElementById("LaMaquina");	var numeroRandom= Math.floor((Math.random() * 100) + 1);	var solucion= document.getElementById("solucion");	var choice;	// La Máquina	if(numeroRandom>0 && numeroRandom<=33.3){		choice="piedra";		LaMaquina.innerText="La Máquina escoge piedra";	 		}	else if(numeroRandom>33.3 && numeroRandom<=66.6){		choice="tijera";		LaMaquina.innerText="La Máquina escoge tijera";	}	else{		choice="papel";		LaMaquina.innerText="La Máquina escoge papel";	}	// Probabilidades piedra	if(jugador== "piedra" && choice=="piedra"){		solucion.innerText="Empate"	}	else if(jugador== "piedra" && choice=="papel"){		solucion.innerText="Perdiste"	}	else if(jugador== "piedra" && choice=="tijera"){		solucion.innerText="You Win"	}	// Probabilidades papel	if(jugador== "papel" && choice=="papel"){		solucion.innerText="Empate"	}	else if(jugador== "papel" && choice=="tijera"){		solucion.innerText="Perdiste"	}	else if(jugador== "papel" && choice=="piedra"){		solucion.innerText="You Win"	}	// Probabilidades tijera	if(jugador== "tijera" && choice=="tijera"){		solucion.innerText="Empate"	}	else if(jugador== "tijera" && choice=="piedra"){		solucion.innerText="Perdiste"	}	else if(jugador== "tijera" && choice=="papel"){		solucion.innerText="You Win"	}}</script></div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cachipun</title>
+	<meta charset="utf-8">
+	<link href="cachipun.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="top-text">
+	<h1>Cachipun</h1>
+	<h2>Piedra | Papel | Tijera</h2>
+	<h3>escoge una opción</h3>
+</div>
+
+<div class="contenedor">
+	<div id="piedra"></div>
+	<div id="papel"></div>
+	<div id="tijeras"></div>
+
+	<div class="el_juego">
+		<h4 id="eleccion"></h4>
+		<h4 id="LaMaquina"></h4>
+		<h5 id="solucion"></h5>
+	</div>
+
+<script type="text/javascript">
+
+// Variables juego
+
+var piedra = document.getElementById("piedra");
+var tijera = document.getElementById("tijeras");
+var papel = document.getElementById("papel");
+var eleccion = document.getElementById("eleccion");
+var jugador;
+
+// Funciones jugador
+
+piedra.onclick = function(){
+eleccion.innerText="Elegiste piedra";
+jugador="piedra";
+juego();
+}
+
+tijeras.onclick = function(){
+eleccion.innerText="Elegiste tijera";
+jugador="tijeras";
+juego();
+}
+
+papel.onclick = function(){
+eleccion.innerText="Elegiste papel";
+jugador="papel";
+juego();
+}
+
+// Funciones juego
+
+function juego (){
+var LaMaquina= document.getElementById("LaMaquina");
+var numeroRandom= Math.floor((Math.random() * 100) + 1);
+var solucion= document.getElementById("solucion");
+var choice;
+
+	// La Máquina
+
+if(numeroRandom>0 && numeroRandom<=33.3){
+choice="piedra";
+LaMaquina.innerText="La Máquina escoge piedra";
+	 	
+}
+else if(numeroRandom>33.3 && numeroRandom<=66.6){
+choice="tijera";
+LaMaquina.innerText="La Máquina escoge tijera";
+}
+else{
+choice="papel";
+LaMaquina.innerText="La Máquina escoge papel";
+}
+
+	// Probabilidades piedra
+
+if(jugador== "piedra" && choice=="piedra"){
+solucion.innerText="Empate"
+}
+else if(jugador== "piedra" && choice=="papel"){
+solucion.innerText="Perdiste"
+}
+else if(jugador== "piedra" && choice=="tijera"){
+solucion.innerText="You Win"
+}
+
+	// Probabilidades papel
+
+if(jugador== "papel" && choice=="papel"){
+solucion.innerText="Empate"
+}
+else if(jugador== "papel" && choice=="tijera"){
+solucion.innerText="Perdiste"
+}
+else if(jugador== "papel" && choice=="piedra"){
+solucion.innerText="You Win"
+}
+
+	// Probabilidades tijera
+if(jugador== "tijera" && choice=="tijera"){
+solucion.innerText="Empate"
+}
+else if(jugador== "tijera" && choice=="piedra"){
+solucion.innerText="Perdiste"
+}
+else if(jugador== "tijera" && choice=="papel"){
+solucion.innerText="You Win"
+}
+
+}
+</script>
+
+</div>
+</body>
+</html>
