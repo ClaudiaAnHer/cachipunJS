@@ -1,0 +1,108 @@
+.contenedor{
+	width: 80%;
+	height: auto;
+	margin-left: 210px;
+}
+
+.top-text {
+	margin-top: 80px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.el_juego {
+	margin-left: 300px;
+	margin-right: auto;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 5px;
+
+}
+
+h2 {
+	font-size: 21px;
+	color: #BDBDBD;
+}
+h3 {
+	font-size: 20px;
+	text-transform: uppercase;
+	line-height: 65px;
+}
+
+h4,{
+
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 5px;
+	margin-left: 210px;
+	margin-right: auto;
+}
+
+h5{
+	font-size: 25px;
+}
+
+#piedra{
+	background-image: url(images/piedra.jpg);
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 100vh;
+	box-sizing: border-box;
+	float: left; 
+
+}
+
+
+#papel{
+	background: url(images/papel.jpg);
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 100vh;
+	box-sizing: border-box;
+	float: left; 
+}
+
+
+#tijeras{
+	background: url(images/tijeras.jpg);
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 100vh;
+	box-sizing: border-box;
+	float: left; 
+}
+
+#piedra:hover{
+	background-image: url(images/eleccion_piedra.jpg);
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 100vh;
+	box-sizing: border-box;
+	float: left; 
+
+}
+
+#papel:hover{
+	background: url(images/eleccion_papel.jpg);
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 100vh;
+	box-sizing: border-box;
+	float: left; 
+}
+
+#tijeras:hover{
+	background: url(images/eleccion_tijeras.jpg);
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 100vh;
+	box-sizing: border-box;
+	float: left; 
+}
